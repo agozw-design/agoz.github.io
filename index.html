@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>贴客社区 · NFC 名片展示页</title>
+  <style>
+    :root {
+      --bg: #f6f6f6;
+      --card-bg: #fff;
+      --text: #222;
+      --muted: #666;
+      --accent: #000;
+      --radius: 12px;
+    }
+    body {
+      margin: 0;
+      font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2em 1em;
+    }
+    header {
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+    header h1 {
+      margin: 0.2em 0;
+      font-size: 1.8em;
+      letter-spacing: 1px;
+    }
+    header p {
+      color: var(--muted);
+      font-size: 0.95em;
+    }
+    .post {
+      background: var(--card-bg);
+      width: 100%;
+      max-width: 600px;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      padding: 1.2em 1.5em;
+      margin-bottom: 1em;
+    }
+    .author {
+      font-weight: 600;
+      margin-bottom: 0.4em;
+    }
+    .time {
+      font-size: 0.8em;
+      color: var(--muted);
+      margin-bottom: 0.8em;
+    }
+    .content {
+      font-size: 1em;
+    }
+    footer {
+      color: var(--muted);
+      font-size: 0.8em;
+      margin-top: 2em;
+      text-align: center;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111;
+        --card-bg: #1b1b1b;
+        --text: #eee;
+        --muted: #aaa;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>贴客社区</h1>
+    <p>欢迎来到我的 NFC 名片展示页</p>
+  </header>
+
+  <div class="post">
+    <div class="author">阿野</div>
+    <div class="time">发布于 2025-11-04</div>
+    <div class="content">
+      今天我尝试做了一个带 NFC 功能的名片，手机感应后就能打开这个页面。
+      <br><br>
+      想法是把「社交」和「设计」结合起来，用最简单的方式留下印象。
+    </div>
+  </div>
+
+  <div class="post">
+    <div class="author">访客留言</div>
+    <div class="time">只读模式</div>
+    <div class="content">
+      这个页面是静态的，没有登录功能。  
+      如果你也想要一个这样的 NFC 名片页，可以自己 fork 这个项目～
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Tieke Studio · 模拟贴吧风格展示页</p>
+  </footer>
+</body>
+</html>
